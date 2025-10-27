@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Epiphone SG Standard — Detalle</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <style>.details-trigger{display:inline-flex;flex-direction:column;align-items:center;gap:6px;} .intro-trigger{display:inline-flex;flex-direction:column;align-items:center;gap:6px;margin-top:28px;}</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand bg-white border-bottom sticky-top py-2"><div class="container d-flex align-items-center"><button class="btn btn-light me-3 p-2 border" data-bs-toggle="offcanvas" data-bs-target="#leftMenu"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand mx-auto fw-light display-title text-center" href="/Page/index.html">Fender Custom Shop</a></div></nav>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="leftMenu"><div class="offcanvas-header"><h5 class="serif">Fender Custom Shop</h5><button class="btn-close" data-bs-dismiss="offcanvas"></button></div><div class="offcanvas-body"><nav class="nav flex-column"><a class="nav-link" href="/Page/index.html#coleccion">Colección</a><a class="nav-link" href="/Page/index.html#especiales">Guitarras Especiales</a></nav></div></div>
+
+  <main class="container my-5"><div class="row g-4 align-items-start">
+    <div class="col-lg-6">
+      <div id="productCarousel" class="carousel slide" data-bs-ride="false"><div class="carousel-inner"><div class="carousel-item active"><img src="../images/epiphone-sg-1.jpg" class="d-block w-100" alt="SG 1" style="object-fit:contain;max-height:560px;"></div><div class="carousel-item"><img src="../images/epiphone-sg-2.jpg" class="d-block w-100" alt="SG 2" style="object-fit:contain;max-height:560px;"></div><div class="carousel-item"><img src="../images/epiphone-sg-3.jpg" class="d-block w-100" alt="SG 3" style="object-fit:contain;max-height:560px;"></div></div><button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div>
+      <div class="mt-3 d-flex gap-2"><img src="../images/epiphone-sg-1.jpg" class="thumb" data-slide-to="0" style="width:72px;height:48px;object-fit:cover;border:2px solid #ddd"><img src="../images/epiphone-sg-2.jpg" class="thumb" data-slide-to="1" style="width:72px;height:48px;object-fit:cover;border:2px solid transparent"><img src="../images/epiphone-sg-3.jpg" class="thumb" data-slide-to="2" style="width:72px;height:48px;object-fit:cover;border:2px solid transparent"></div>
+    </div>
+
+    <div class="col-lg-6" id="productBlock">
+      <h1 class="serif display-5">Epiphone SG Standard</h1>
+      <div id="summaryArea" class="product-summary mt-2">
+        <p id="productPrice" class="h4 text-muted">$1,049</p>
+        <p id="productIntro" class="text-muted">SG con cuerpo delgado y acceso cómodo al diapasón para solos rápidos.</p>
+        <div class="mt-4"><button id="detailsTrigger" class="details-trigger"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 16.5l-7-7 1.4-1.4L12 13.7l5.6-5.6L19 9.5z"/></svg><span>Details</span></button></div>
+      </div>
+
+      <div id="tabsArea" class="d-none mt-2" aria-hidden="true">
+        <ul class="nav nav-tabs mt-2"><li class="nav-item"><button class="nav-link active" id="tab-desc" data-bs-toggle="tab" data-bs-target="#tabDescPane">Descripción</button></li><li class="nav-item"><button class="nav-link" id="tab-spec" data-bs-toggle="tab" data-bs-target="#tabSpecPane">Especificaciones</button></li></ul>
+        <div class="tab-content mt-3"><div class="tab-pane fade show active" id="tabDescPane"><p id="tabShortDesc">SG clásico, cómodo y con gran ataque en distorsión.</p></div><div class="tab-pane fade" id="tabSpecPane"><table class="table table-borderless mt-2"><tbody><tr><th>Cuerpo</th><td>Caoba ligera</td></tr><tr><th>Mástil</th><td>Set neck caoba</td></tr><tr><th>Pastillas</th><td>Humbuckers</td></tr></tbody></table></div></div>
+
+        <div class="text-center"><button id="introTrigger" class="intro-trigger"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 16.5l-7-7 1.4-1.4L12 13.7l5.6-5.6L19 9.5z"/></svg><span>Introducción</span></button></div>
+        <div id="introPanel" class="collapse mt-3"><div class="card card-body border-0 p-0"><p id="introFull" class="text-muted">SG: diseño, ergonomía y uso en rock clásico.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contact" class="mt-5 text-center text-muted">© 2025 Fender Custom Shop</footer></main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="product-page.js"></script>
+</body>
+</html>
