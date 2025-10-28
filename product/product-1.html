@@ -23,10 +23,19 @@
 <body>
   <nav class="navbar navbar-expand bg-white border-bottom sticky-top py-2">
     <div class="container d-flex align-items-center">
+      <!-- Search icon: muestra/oculta controles + campo de texto -->
       <button class="btn btn-light me-3 p-2 border" type="button" data-bs-toggle="offcanvas" data-bs-target="#leftMenu" aria-controls="leftMenu" aria-label="Abrir menú">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand mx-auto fw-light display-title text-center" href="/Page/index.html">Fender Custom Shop</a>
+      <div class="ms-auto d-flex align-items-center">
+        <button id="searchToggle" class="btn btn-outline-light border p-2" aria-expanded="false" aria-controls="filtersRow" aria-label="Mostrar búsqueda y filtros">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M11 6a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+            <path d="M15.7 14.3 11.9 10.5a6 6 0 1 0-1.4 1.4l3.8 3.8a1 1 0 0 0 1.4-1.4z"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -80,7 +89,7 @@
           <p id="productPrice" class="h4 text-muted">$2,499</p>
           <p id="productIntro" class="text-muted">Stratocaster Custom con cuerpo de aliso, mástil de arce y pastillas single-coil vintage.</p>
 
-          <div class="mt-4">
+          <div class="text-center">
             <button id="detailsTrigger" class="details-trigger" aria-controls="tabsArea" aria-expanded="false" aria-label="Mostrar detalles">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 16.5l-7-7 1.4-1.4L12 13.7l5.6-5.6L19 9.5z"/></svg>
               <span>Details</span>
@@ -90,8 +99,8 @@
 
         <div id="tabsArea" class="d-none mt-2" aria-hidden="true">
           <ul class="nav nav-tabs mt-2" id="mainTabs" role="tablist">
-            <li class="nav-item"><button class="nav-link active" id="tab-desc" data-bs-toggle="tab" data-bs-target="#tabDescPane" type="button">Descripción</button></li>
-            <li class="nav-item"><button class="nav-link" id="tab-spec" data-bs-toggle="tab" data-bs-target="#tabSpecPane" type="button">Especificaciones</button></li>
+            <li class="nav-item"><button class="nav-link active" id="tab-desc" data-bs-toggle="tab" data-bs-target="#tabDescPane" type="button" style="color:black">Descripción</button></li>
+            <li class="nav-item"><button class="nav-link" id="tab-spec" data-bs-toggle="tab" data-bs-target="#tabSpecPane" type="button" style="color:black">Especificaciones</button></li>
           </ul>
 
           <div class="tab-content mt-3">
@@ -113,7 +122,7 @@
           </div>
 
           <div class="text-center">
-            <button id="introTrigger" class="intro-trigger" aria-controls="introPanel" aria-expanded="false" aria-label="Mostrar introducción">
+            <button id="introTrigger" class="details-trigger" aria-controls="tabsArea" aria-expanded="false" aria-label="Mostrar detalles">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 16.5l-7-7 1.4-1.4L12 13.7l5.6-5.6L19 9.5z"/></svg>
               <span>Introducción</span>
             </button>
